@@ -23,25 +23,54 @@
                 <input type="email" id="email" name="email" required>
             </div> 
             <!-- Quiz Questions -->
+            <!-- Radio Questions I use this link  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
+            <!-- and this link https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/ -->
             <div class="question">
                 <p>Q1. In which country did the FIFA World Football take place in 2023?</p>
-                <input type="radio" name="q1" value="brazil" > Brazil
-                <input type="radio" name="q1" value="qatar" id="correctQ1">Qatar
-                <input type="radio" name="q1" value="germany"> Germany
+                <div>
+                    <input type="radio" name="q1" value="Brazil" id="brazil"> 
+                    <label for="brazil">Brazil</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="Qatar" id="qatar"> 
+                    <label for="qatar">Qatar</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="Germany" id="germany">
+                    <label for="germany">Germany</label>
+                </div>
             </div>
 
             <div class="question">
                 <p>Q2. In which team does Lionel Messi currently play?</p>
-                <input type="radio" name="q2" value="paris saint-germain (PSG)"> Paris Saint-Germain (PSG)
-                <input type="radio" name="q2" value="barcelona fc"> Barcelona FC
-                <input type="radio" name="q2" value="inter miami" id="correctQ2">Inter Miami
+                <div>
+                    <input type="radio" name="q2" value="Liverpool" id="liverpool"> 
+                    <label for="liverpool">Liverpool</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="Inter Miami" id="inter miami"> 
+                    <label for="inter miami">Inter Miami</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="Barcelona" id="barcelona">
+                    <label for="barcelona">Barcelona</label>
+                </div>
             </div>
 
             <div class="question">
                 <p>Q3. Who holds the title of the top basketball player in the world for the 2023-24 season?</p>
-                <input type="radio" name="q3" value="kevin durant"> Kevin Durant
-                <input type="radio" name="q3" value="nikola jokic" id="correctQ3">Nikola Jokic
-                <input type="radio" name="q3" value="anthony davis"> Anthony Davis
+                <div>
+                    <input type="radio" name="q3" value="Kevin Durant" id="kevin Durant"> 
+                    <label for="kevin Durant">Kevin Durant</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="Nikola jokic" id="nikola jokic"> 
+                    <label for="nikola jokic">Nikola jokic</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="Anthony davis" id="anthony davis">
+                    <label for="anthony davis">Anthony davis</label>
+                </div>
             </div>
         </form>
         <div id="error-message" class="error-message"></div>
