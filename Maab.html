@@ -10,7 +10,6 @@
     <div id="quiz-detail">
         <h1 class ="Quiz"> Quiz:</h1>
         <form id="quiz-form">
-            <!-- I use this link https://www.altcademy.com/blog/how-to-get-user-input-in-javascript/ -->
             <div>
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" title="Only letters are allowed">
@@ -23,5 +22,29 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div> 
+            <!-- Quiz Questions -->
+            <div class="question">
+                <p>Q1. In which country did the FIFA World Football take place in 2023?</p>
+                <input type="radio" name="q1" value="brazil" > Brazil
+                <input type="radio" name="q1" value="qatar" id="correctQ1">Qatar
+                <input type="radio" name="q1" value="germany"> Germany
+            </div>
+
+            <div class="question">
+                <p>Q2. In which team does Lionel Messi currently play?</p>
+                <input type="radio" name="q2" value="paris saint-germain (PSG)"> Paris Saint-Germain (PSG)
+                <input type="radio" name="q2" value="barcelona fc"> Barcelona FC
+                <input type="radio" name="q2" value="inter miami" id="correctQ2">Inter Miami
+            </div>
+
+            <div class="question">
+                <p>Q3. Who holds the title of the top basketball player in the world for the 2023-24 season?</p>
+                <input type="radio" name="q3" value="kevin durant"> Kevin Durant
+                <input type="radio" name="q3" value="nikola jokic" id="correctQ3">Nikola Jokic
+                <input type="radio" name="q3" value="anthony davis"> Anthony Davis
+            </div>
+        </form>
+        <div id="error-message" class="error-message"></div>
+    <script src="Maab.js"></script>
 </body>
 </html>
