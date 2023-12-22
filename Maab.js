@@ -8,7 +8,7 @@ function formValidate() {
     var nameRegex = /^[A-Za-z]+$/; // to check if both first name and last name contain only letters
 
     if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
-        document.getElementById('error-message').innerHTML = 'Try again only letter are accepted';
+        document.getElementById('error-message').textContent  = 'Try again only letter are accepted';
         return;
     }
 
@@ -17,7 +17,7 @@ function formValidate() {
     var emailRegex= /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // to check if the email has a valid format
 
     if (!emailRegex.test(email)) {
-        document.getElementById('error-message').innerHTML = 'Please enter a valid email address';
+        document.getElementById('error-message').textContent  = 'Please enter a valid email address';
         return;
     }
 

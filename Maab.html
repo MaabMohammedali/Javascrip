@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
+    <div id="error-message" class="error-message"></div>
     <div id="quiz-detail">
         <h1 class ="Quiz"> Quiz:</h1>
-        <form id="quiz-form">
+        <form id="quiz-form" onsubmit="return formValidate()">
             <div>
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" title="Only letters are allowed">
@@ -28,15 +29,15 @@
             <div class="question">
                 <p>Q1. In which country did the FIFA World Football take place in 2023?</p>
                 <div>
-                    <input type="radio" name="q1" value="Brazil" id="brazil"> 
+                    <input type="radio" name="q1" value="Brazil" id="brazil" required> 
                     <label for="brazil">Brazil</label>
                 </div>
                 <div>
-                    <input type="radio" name="q1" value="Qatar" id="qatar"> 
+                    <input type="radio" name="q1" value="Qatar" id="qatar" required> 
                     <label for="qatar">Qatar</label>
                 </div>
                 <div>
-                    <input type="radio" name="q1" value="Germany" id="germany">
+                    <input type="radio" name="q1" value="Germany" id="germany" required> 
                     <label for="germany">Germany</label>
                 </div>
             </div>
@@ -44,15 +45,15 @@
             <div class="question">
                 <p>Q2. In which team does Lionel Messi currently play?</p>
                 <div>
-                    <input type="radio" name="q2" value="Liverpool" id="liverpool"> 
+                    <input type="radio" name="q2" value="Liverpool" id="liverpool" required> 
                     <label for="liverpool">Liverpool</label>
                 </div>
                 <div>
-                    <input type="radio" name="q2" value="Inter Miami" id="inter miami"> 
+                    <input type="radio" name="q2" value="Inter Miami" id="inter miami" required> 
                     <label for="inter miami">Inter Miami</label>
                 </div>
                 <div>
-                    <input type="radio" name="q2" value="Barcelona" id="barcelona">
+                    <input type="radio" name="q2" value="Barcelona" id="barcelona" required>
                     <label for="barcelona">Barcelona</label>
                 </div>
             </div>
@@ -72,19 +73,19 @@
                     <label for="anthony davis">Anthony Davis</label>
                 </div>
             </div>
-           <!-- To solve this task I use this link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox -->
+            <!-- To solve this task I use this link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox -->
             <div class="question">
                 <p>Q4. Who is the current president of the United States?</p>
                 <div>
-                    <input type="checkbox" id="kamala harris" name="q4" value="kamala harris" />
+                    <input type="checkbox" id="kamala harris" name="q4" value="kamala harris">
                     <label for="kamala harris">Kamala Harris</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="donald trump" name="q4" value="donald trump" />
+                    <input type="checkbox" id="donald trump" name="q4" value="donald trump">
                     <label for="donald trump">Donald Trump</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="joe biden" name="q4" value="joe biden" />
+                    <input type="checkbox" id="joe biden" name="q4" value="joe biden">
                     <label for="joe biden">Joe Biden</label>
                 </div>
             </div>
@@ -92,15 +93,15 @@
             <div class="question">
                 <p>Q5. what is the capital of India?</p>
                 <div>
-                    <input type="checkbox" id="mumbai" name="q5" value="mumbai" />
+                    <input type="checkbox" id="mumbai" name="q5" value="mumbai">
                     <label for="mumbai">Mumbai</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="new delhi" name="q5" value="new delhi" />
+                    <input type="checkbox" id="new delhi" name="q5" value="new delhi">
                     <label for="new delhi">New Delhi</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="hyderabad" name="q5" value="hyderabad" />
+                    <input type="checkbox" id="hyderabad" name="q5" value="hyderabad">
                     <label for="hyderabad">Hyderabad</label>
                 </div>
             </div>
@@ -108,15 +109,15 @@
             <div class="question">
                 <p>Q6. what is the colour of the sky?</p>
                 <div>
-                    <input type="checkbox" id="blue" name="q6" value="blue" />
+                    <input type="checkbox" id="blue" name="q6" value="blue">
                     <label for="blue">Blue</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="white" name="q6" value="white" />
+                    <input type="checkbox" id="white" name="q6" value="white">
                     <label for="white">White</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="colourless" name="q6" value="colourless" />
+                    <input type="checkbox" id="colourless" name="q6" value="colourless">
                     <label for="colourless">Colourless</label>
                 </div>
             </div>
@@ -124,15 +125,15 @@
             <div class="question">
                 <p>Q7.  What is the biggest creature on the ocean?</p>
                 <div>
-                    <input type="checkbox" id="fish" name="q7" value="fish" />
+                    <input type="checkbox" id="fish" name="q7" value="fish">
                     <label for="fish">Fish</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="blue whale" name="q7" value="blue whale" />
+                    <input type="checkbox" id="blue whale" name="q7" value="blue whale">
                     <label for="blue whale">Blue Whale</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="shark" name="q7" value="shark" />
+                    <input type="checkbox" id="shark" name="q7" value="shark">
                     <label for="shark">Shark</label>
                 </div>
             </div>
@@ -140,15 +141,15 @@
             <div class="question">
                 <p>Q8.what genre of movies is most popular?</p>
                 <div>
-                    <input type="checkbox" id="action" name="q8" value="action" />
+                    <input type="checkbox" id="action" name="q8" value="action" required>
                     <label for="action">Action</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="romance" name="q8" value="romance" />
+                    <input type="checkbox" id="romance" name="q8" value="romance" required>
                     <label for="romance">Romance</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="historical" name="q8" value="historical" />
+                    <input type="checkbox" id="historical" name="q8" value="historical" required>
                     <label for="historical">Historical</label>
                 </div>
             </div>
@@ -161,7 +162,7 @@
 
             <div class="question">
                 <p>Q10. Which river is recognized as the largest in the world?</p>
-                <input type="text" name="q10">
+                <input type="text" name="q10" required>
             </div>
 
             <div class="question">
